@@ -1,0 +1,46 @@
+#root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar,.nav-bottom {
+    background-color: #b8d839; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border: 1em;
+    box-shadow: 0 2px 4px rgba(11, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  .nav-bottom {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 2em;
+    border: 5px;
+    border-color: black;
+    border-radius: 10px;
+    text-underline-offset: none;
+  }
+  
+  
+  .contact-info, .navbar-links, .additional-links, .contact-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-link, .navbar-link {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+
+  }
+
+  
