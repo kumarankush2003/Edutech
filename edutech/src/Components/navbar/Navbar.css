@@ -4,28 +4,27 @@
     box-sizing: border-box;
 }
 
-.navbar, .nav-bottom {
-    background-color: #b8d839; 
+.navbar {
+    background-color: #b8d839;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0; 
+    padding: 10px 0;
     top: 0;
     width: 100%;
     z-index: 1000;
-    border: 1em;
     box-shadow: 0 2px 4px rgba(11, 0, 0, 0.1);
     border-radius: 10px;
 }
 
 .nav-bottom {
+    position: relative; /* This allows the underline slider to position itself relative to nav-bottom */
     text-decoration: none;
     color: black;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 2em;
-  
     border-radius: 10px;
     text-underline-offset: none;
 }
@@ -51,8 +50,17 @@
 
 .nav-bottom .navbar-c:hover {
     text-decoration: none;
-    color: black; 
+    color: black;
 }
+
+.nav-bottom .underline-slider {
+    position: absolute;
+    bottom: 0; /* Positioned at the bottom of the nav-bottom container */
+    height: 4px;
+    background-color: grey;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
 .navbar-item {
     position: relative;
     text-decoration: none;
@@ -61,7 +69,7 @@
 .dropdown {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 150%;
     left: 0;
     background-color: white;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -85,4 +93,3 @@
 .dropdown-item:hover {
     background-color: #ddd;
 }
-
