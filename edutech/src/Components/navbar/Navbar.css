@@ -18,7 +18,7 @@
 }
 
 .nav-bottom {
-    position: relative; /* This allows the underline slider to position itself relative to nav-bottom */
+    position: relative; 
     text-decoration: none;
     color: black;
     display: flex;
@@ -55,7 +55,7 @@
 
 .nav-bottom .underline-slider {
     position: absolute;
-    bottom: 0; /* Positioned at the bottom of the nav-bottom container */
+    bottom: 0; 
     height: 4px;
     background-color: grey;
     transition: left 0.3s ease, width 0.3s ease;
@@ -74,7 +74,7 @@
     background-color: white;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    border-radius: 5px;
+    border-radius: 1em;
     overflow: hidden;
 }
 
@@ -88,8 +88,15 @@
     display: block;
     color: black;
     white-space: nowrap;
+    transition: 1s;
 }
 
 .dropdown-item:hover {
     background-color: #ddd;
+    
 }
+
+.icon-text{
+    margin-left: 8px;
+}
+
