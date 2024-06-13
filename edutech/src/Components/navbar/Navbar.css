@@ -66,6 +66,7 @@
     text-decoration: none;
 }
 
+
 .dropdown {
     display: none;
     position: absolute;
@@ -93,7 +94,6 @@
 
 .dropdown-item:hover {
     background-color: #ddd;
-    
 }
 
 .icon-text{

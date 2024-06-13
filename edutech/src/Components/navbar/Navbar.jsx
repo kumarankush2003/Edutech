@@ -6,8 +6,13 @@ const Navbar = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
     const navBottomRef = useRef(null);
+    const hideTimeoutRef = useRef(null); // Reference to store the timeout ID
 
     const handleMouseEnter = (menu, event) => {
+        if (hideTimeoutRef.current) {
+            clearTimeout(hideTimeoutRef.current);
+            hideTimeoutRef.current = null;
+        }
         setOpenDropdown(menu);
         const target = event.currentTarget;
         setUnderlineStyle({
@@ -17,15 +22,31 @@ const Navbar = () => {
     };
 
     const handleMouseLeave = () => {
+        hideTimeoutRef.current = setTimeout(() => {
+            setOpenDropdown(null);
+            setUnderlineStyle({ left: 0, width: 0 });
+        }, 300); // Adjust the delay as needed
+    };
+
+    const handleDropdownMouseEnter = () => {
+        if (hideTimeoutRef.current) {
+            clearTimeout(hideTimeoutRef.current);
+            hideTimeoutRef.current = null;
+        }
+    };
+
+    const handleDropdownMouseLeave = () => {
         setOpenDropdown(null);
         setUnderlineStyle({ left: 0, width: 0 });
     };
+
     const handleDropdownItemClick = (event) => {
         // Prevent default behavior to keep the dropdown open
         event.preventDefault();
         // Perform navigation or other actions
         console.log('Navigating to:', event.target.href);
     };
+
     const menuItems = {
         applyOnline: {
             icon: 'fa fa-laptop',
@@ -106,7 +127,7 @@ const Navbar = () => {
             ]
         }
     };
-    
+
     return (
         <>
             <nav className="navbar">
@@ -134,12 +155,18 @@ const Navbar = () => {
                         key={key}
                         className="navbar-item"
                         onMouseEnter={(e) => handleMouseEnter(key, e)}
-                        onMouseLeave={(e) => handleMouseLeave(key, e)}
+                        onMouseLeave={handleMouseLeave}
                     >
                         <a href="#" className="navbar-c">
-                            <i className={menuItems[key].icon}></i><span className="icon-text"> {key.replace(/([A-Z])/g, ' $1').toUpperCase()}</span>
+                            <i className={menuItems[key].icon}></i><span className="icon-text"> {key.toUpperCase().replace(/_/g, ' ')}</span>
                         </a>
-                        <Dropdown items={menuItems[key].items} isOpen={openDropdown === key}onItemClick={handleDropdownItemClick} />
+                        <Dropdown 
+                            items={menuItems[key].items} 
+                            isOpen={openDropdown === key}
+                            onItemClick={handleDropdownItemClick}
+                            onMouseEnter={handleDropdownMouseEnter}
+                            onMouseLeave={handleDropdownMouseLeave}
+                        />
                     </div>
                 ))}
                 <div className="underline-slider" style={underlineStyle}></div>
