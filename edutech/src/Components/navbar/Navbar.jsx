@@ -1,12 +1,12 @@
 import React, { useRef, useState } from 'react';
 import Dropdown from '../dropdown/Dropdown';
-import './Navbar.css'; // Import the CSS file
+import './Navbar.css';
 
 const Navbar = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
     const navBottomRef = useRef(null);
-    const hideTimeoutRef = useRef(null); // Reference to store the timeout ID
+    const hideTimeoutRef = useRef(null); 
 
     const handleMouseEnter = (menu, event) => {
         if (hideTimeoutRef.current) {
@@ -48,7 +48,7 @@ const Navbar = () => {
     };
 
     const menuItems = {
-        applyOnline: {
+        apply_Online: {
             icon: 'fa fa-laptop',
             items: [
                 { label: 'Application Form', link: '#' },
@@ -80,7 +80,7 @@ const Navbar = () => {
                 { label: 'X TH Courses', link: '#' }
             ]
         },
-        studentZone: {
+        student_Zone: {
             icon: 'fa fa-user-graduate',
             items: [
                 { label: 'Student Portal', link: '#' },
@@ -98,7 +98,7 @@ const Navbar = () => {
                 { label: 'Download Marksheet', link: '#' }
             ]
         },
-        aboutUs: {
+        about_Us: {
             icon: 'fa fa-info-circle',
             items: [
                 { label: 'Our Vision', link: '#' },
@@ -108,7 +108,7 @@ const Navbar = () => {
                 { label: 'Contact Information', link: '#' }
             ]
         },
-        contactUs: {
+        contact_Us: {
             icon: 'fa fa-phone',
             items: [
                 { label: 'Contact Form', link: '#' },
