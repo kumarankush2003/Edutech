@@ -1,4 +1,4 @@
-.admit-card-page {
+.associate-login-page {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -22,30 +22,12 @@
 .form-group {
     margin-bottom: 15px;
     position: relative;
+    width: 100%;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
-}
-
-.form-group .input-container {
-    position: relative;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.577);
-    overflow: hidden;
-}
-
-.form-group select {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    box-sizing: border-box;
-    font-size: 16px;
-    outline: none;
-    transition: box-shadow 0.3s ease;
 }
 
 .form-group input {
@@ -59,8 +41,7 @@
     transition: box-shadow 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group select:focus {
+.form-group input:focus {
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
@@ -87,14 +68,4 @@ button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.info-section {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.info-section p {
-    font-size: 21px;
-    font-weight: bold;
 }

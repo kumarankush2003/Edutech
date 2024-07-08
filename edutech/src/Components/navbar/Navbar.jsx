@@ -239,7 +239,7 @@ const Navbar = () => {
                 { label: 'How to Apply', link: '#' },
                 { label: 'Important Dates', link: '#' },
                 { label: 'Application Status', link: '#' },
-                { label: 'Associate Login', link: '#' }
+                { label: 'Associate Login', link: '/associatelogin' }
             ]
         },
         // Other menu items...
