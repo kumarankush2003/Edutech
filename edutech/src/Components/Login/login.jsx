@@ -73,8 +73,8 @@ const Login = () => {
                     <ul>
                         <li><Link to="/admitcard">Admit Card</Link></li>
                         <li><Link to="/result">Result</Link></li>
-                        <li><Link to="#">Test Reappearing</Link></li>
-                        <li><Link to="#">Test Registration (RESONite)</Link></li>
+                        <li><Link to="/testreappear">Test Reappearing</Link></li>
+                        <li><Link to="/testregister">Test Registration (RESONite)</Link></li>
                     </ul>
                 </div>
                 <div className="pdf-section">
