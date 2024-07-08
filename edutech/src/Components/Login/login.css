@@ -1,0 +1,105 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.login-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.enroll-section, .login-section {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.enroll-section .enroll-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login-section .form-group {
+    margin-bottom: 15px;
+}
+
+.login-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-section input, .login-section select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.login-section .dob-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.login-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-section, .pdf-section {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card-section ul, .pdf-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-section li, .pdf-section li {
+    margin-bottom: 10px;
+}
+
+.card-section a, .pdf-section a {
+    text-decoration: none;
+    color: #007bff;
+}

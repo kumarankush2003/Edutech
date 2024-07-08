@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Dropdown = ({ items, isOpen, onItemClick, onMouseEnter, onMouseLeave }) => {
     return (
@@ -8,14 +9,14 @@ const Dropdown = ({ items, isOpen, onItemClick, onMouseEnter, onMouseLeave }) =>
             onMouseLeave={onMouseLeave}
         >
             {items.map((item, index) => (
-                <a 
+                <Link 
                     key={index} 
-                    href={item.link} 
+                    to={item.link} 
                     className="dropdown-item" 
                     onClick={onItemClick}
                 >
                     {item.label}
-                </a>
+                </Link>
             ))}
         </div>
     );

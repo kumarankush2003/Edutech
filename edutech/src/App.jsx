@@ -1,16 +1,21 @@
-import { useState } from 'react';
-import './App.css';
-import Footer from './Components/Footer/Footer';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/navbar/Navbar';
-function App() {
-  const [count, setCount] = useState(0)
+import Footer from './Components/Footer/Footer';
+import Login from "./Components/Login/login";
+// Import other components/pages as needed
 
+function App() {
   return (
-    <>
-      <Navbar/>
-      <Footer/>
-    </>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+       
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;
