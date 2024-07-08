@@ -11,15 +11,25 @@ const AdmitCard = () => {
             <div className="form-section">
                 <form>
                     <div className="form-group">
-                        <label htmlFor="session">Session</label>
-                        <input type="text" id="session" name="session" required />
+                        <label htmlFor="session">
+                            Session <span className="required">*</span>
+                        </label>
+                        <select id="session" name="session" required>
+                            <option value="2024-25">2024-25</option>
+                            <option value="2023-24">2023-24</option>
+                            <option value="2022-23">2022-23</option>
+                        </select>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="applicationNumber">Application No.</label>
+                        <label htmlFor="applicationNumber">
+                            Application No. <span className="required">*</span>
+                        </label>
                         <input type="text" id="applicationNumber" name="applicationNumber" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="contactNumber">Contact No.</label>
+                        <label htmlFor="contactNumber">
+                            Contact No. <span className="required">*</span>
+                        </label>
                         <input type="text" id="contactNumber" name="contactNumber" required />
                     </div>
                     <button type="submit">Submit</button>

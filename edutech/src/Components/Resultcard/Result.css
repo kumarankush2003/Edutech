@@ -4,6 +4,10 @@
     margin: 0 auto;
     padding: 20px;
     font-family: 'Times New Roman', Times, serif;
+    background: #d3ddd2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateZ(0);
 }
 
 .header h1 {
@@ -17,6 +21,7 @@
 
 .form-group {
     margin-bottom: 15px;
+    position: relative;
 }
 
 .form-group label {
@@ -24,10 +29,24 @@
     margin-bottom: 5px;
 }
 
-.form-group input {
+.form-group input, .form-group select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
     box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.required {
+    color: red;
+    font-weight: bold;
 }
 
 button {
@@ -36,9 +55,17 @@ button {
     background-color: #007BFF;
     color: white;
     border: none;
+    border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    display: block;
+    font-size: 14px; /* Adjusted font size */
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
