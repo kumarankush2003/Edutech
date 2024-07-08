@@ -72,7 +72,7 @@ const Login = () => {
                     <h3>Admit Card, Test Result & Test Reappearing</h3>
                     <ul>
                         <li><Link to="/admitcard">Admit Card</Link></li>
-                        <li><Link to="#">Result</Link></li>
+                        <li><Link to="/result">Result</Link></li>
                         <li><Link to="#">Test Reappearing</Link></li>
                         <li><Link to="#">Test Registration (RESONite)</Link></li>
                     </ul>

@@ -4,6 +4,7 @@ import Navbar from './Components/navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import Login from "./Components/Login/login";
 import Admitcard from "./Components/Admitcard/Admitcard";
+import Result from './Components/Resultcard/Result';
 // Import other components/pages as needed
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/login" element={<Login />} />
-        <Route path="/admitcard" element={<Admitcard />} />
+        <Route exact path="/admitcard" element={<Admitcard />} />
+        <Route exact path="/result" element={<Result/>} />
       </Routes>
       <Footer />
     </Router>
