@@ -26,7 +26,7 @@ const Navbar = () => {
         hideTimeoutRef.current = setTimeout(() => {
             setOpenDropdown(null);
             setUnderlineStyle({ left: 0, width: 0 });
-        }, 300); // Adjust the delay as needed
+        }, 500); // Adjust the delay as needed
     };
 
     const handleDropdownMouseEnter = () => {
@@ -37,6 +37,9 @@ const Navbar = () => {
     };
 
     const handleDropdownMouseLeave = () => {
+        // if (navBottomRef.current && navBottomRef.current.contains(document.activeElement)) {
+        //     return;
+        // }
         setOpenDropdown(null);
         setUnderlineStyle({ left: 0, width: 0 });
     };
@@ -149,7 +152,7 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            <nav className='nav-bottom' ref={navBottomRef}>
+            <nav className='nav-bottom' ref={navBottomRef} style={{ zIndex: 100 }}>
                 {Object.keys(menuItems).map((key) => (
                     <div 
                         key={key}
